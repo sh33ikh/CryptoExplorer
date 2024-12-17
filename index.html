@@ -6,63 +6,141 @@
     <title>CryptoExplorer - Unveiling the Secrets of Digital Assets</title>
     <meta name="description" content="Dive into the world of cryptocurrency. Explore key generation, wallet statuses, and the latest crypto trends with CryptoExplorer.">
     <meta name="keywords" content="cryptocurrency, Bitcoin, Ethereum, blockchain, digital assets, crypto wallet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "CryptoExplorer",
-      "url": "https://www.cryptoexplorer.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.cryptoexplorer.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "CryptoExplorer",
+        "url": "https://sh33ikh.github.io/CryptoExplorer/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://sh33ikh.github.io/CryptoExplorer/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
     }
     </script>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="explorer.html">Explorer</a></li>
-                <li><a href="contribute.html">Contribute</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logo.svg" alt="CryptoExplorer Logo" width="30" height="30" class="d-inline-block align-top">
+                    CryptoExplorer
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="insights.html">Insights</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="explorer.html">Explorer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contribute.html">Contribute</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main>
-        <h1>Welcome to CryptoExplorer</h1>
-        <p>Uncover the mysteries of digital assets and blockchain technology.</p>
-        
-        <section id="key-demo">
-            <h2>Crypto Key Generation</h2>
-            <p>Experience the power of cryptographic key creation:</p>
-            <button id="generate-key">Generate Key</button>
-            <div id="key-result"></div>
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4">Discover the Power of Crypto Keys</h1>
+                        <p class="lead">Unlock the potential of digital assets with our advanced key generation tools.</p>
+                        <div class="mt-4">
+                            <button id="generate-key" class="btn btn-primary btn-lg me-3">Generate Key</button>
+                            <a href="explorer.html" class="btn btn-outline-primary btn-lg">Explore More</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="key-visualization">
+                            <div id="key-result" class="code-display"></div>
+                            <div id="wallet-status" class="status-indicator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="wallet-demo">
-            <h2>Wallet Status Visualization</h2>
-            <div id="wallet-status"></div>
+        <section class="features">
+            <div class="container">
+                <h2 class="text-center mb-5">Key Features</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-key-fill"></i>
+                            <h3>Advanced Key Generation</h3>
+                            <p>Generate cryptographically secure keys using industry-standard algorithms.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-shield-check"></i>
+                            <h3>Wallet Integration</h3>
+                            <p>Connect your favorite wallet and manage your digital assets seamlessly.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-graph-up"></i>
+                            <h3>Real-time Analytics</h3>
+                            <p>Track market trends and analyze cryptocurrency performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="insights.html">Insights</a></li>
-                <li><a href="explorer.html">Explorer</a></li>
-                <li><a href="contribute.html">Contribute</a></li>
-            </ul>
-        </nav>
-        <p>&copy; 2023 CryptoExplorer. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>CryptoExplorer</h5>
+                    <p>Empowering users with advanced crypto tools and insights.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                        <li><a href="explorer.html">Explorer</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="#" target="_blank"><i class="bi bi-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2023 CryptoExplorer. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
