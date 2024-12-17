@@ -3,220 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoExplorer - Advanced Blockchain Technology Tools</title>
-    <meta name="description" content="Discover the power of blockchain technology with CryptoExplorer. Generate keys, analyze wallets, and explore crypto trends in real-time.">
-    <meta name="keywords" content="blockchain, cryptocurrency, Bitcoin, Ethereum, wallet analysis, crypto trends">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="CryptoExplorer - Advanced Blockchain Technology Tools">
-    <meta property="og:description" content="Discover the power of blockchain technology with CryptoExplorer">
-    <meta property="og:image" content="https://sh33ikh.github.io/CryptoExplorer/assets/images/og-image.jpg">
-    <meta property="og:url" content="https://sh33ikh.github.io/CryptoExplorer/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/styles.min.css">
-    
-    <!-- Preload Critical Assets -->
-    <link rel="preload" href="assets/fonts/crypto-icons.woff2" as="font" type="font/woff2" crossorigin>
-    
-    <!-- Schema.org Markup -->
+    <title>CryptoExplorer - Unveiling the Secrets of Digital Assets</title>
+    <meta name="description" content="Dive into the world of cryptocurrency. Explore key generation, wallet statuses, and the latest crypto trends with CryptoExplorer.">
+    <meta name="keywords" content="cryptocurrency, Bitcoin, Ethereum, blockchain, digital assets, crypto wallet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
+      "@type": "WebSite",
       "name": "CryptoExplorer",
-      "description": "Advanced blockchain technology tools for key generation and wallet analysis",
-      "url": "https://sh33ikh.github.io/CryptoExplorer/",
-      "applicationCategory": "Blockchain Tool",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
+      "url": "https://www.cryptoexplorer.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.cryptoexplorer.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
     }
     </script>
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">
-                <img src="assets/images/logo.svg" alt="CryptoExplorer Logo" width="180" height="40">
-            </a>
-            
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="index.html" class="nav__link active">
-                            <i class="ri-home-line"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="insights.html" class="nav__link">
-                            <i class="ri-lightbulb-line"></i> Insights
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="explorer.html" class="nav__link">
-                            <i class="ri-search-line"></i> Explorer
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contribute.html" class="nav__link">
-                            <i class="ri-coin-line"></i> Contribute
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="nav__buttons">
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                    <i class="ri-moon-line"></i>
-                </button>
-                <button id="connect-wallet" class="connect-wallet">
-                    Connect Wallet
-                </button>
-            </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="main">
-        <section class="hero section">
-            <div class="hero__container container">
-                <div class="hero__content">
-                    <h1 class="hero__title">
-                        Unlock the Power of <span class="gradient-text">Blockchain</span>
-                    </h1>
-                    <p class="hero__description">
-                        Generate secure keys, analyze wallet patterns, and explore the latest crypto trends with our advanced tools.
-                    </p>
-                    <div class="hero__buttons">
-                        <a href="#generate" class="button button--primary">Start Exploring</a>
-                        <a href="insights.html" class="button button--ghost">View Insights</a>
-                    </div>
-                </div>
-
-                <div class="hero__image">
-                    <img src="assets/images/hero-illustration.svg" alt="Blockchain Technology Illustration">
-                </div>
-            </div>
+    <main>
+        <h1>Welcome to CryptoExplorer</h1>
+        <p>Uncover the mysteries of digital assets and blockchain technology.</p>
+        
+        <section id="key-demo">
+            <h2>Crypto Key Generation</h2>
+            <p>Experience the power of cryptographic key creation:</p>
+            <button id="generate-key">Generate Key</button>
+            <div id="key-result"></div>
         </section>
 
-        <section id="generate" class="generate section">
-            <div class="generate__container container">
-                <h2 class="section__title">Key Generation</h2>
-                <div class="generate__content">
-                    <div class="generate__card">
-                        <div class="generate__header">
-                            <h3>Create New Key</h3>
-                            <button id="generate-key" class="button button--secondary">
-                                Generate
-                            </button>
-                        </div>
-                        <div id="key-result" class="generate__result">
-                            <div class="generate__placeholder">
-                                Click generate to create a new key
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="generate__info">
-                        <div id="wallet-status" class="wallet-status">
-                            <div class="wallet-status__indicator"></div>
-                            <span class="wallet-status__text">Ready</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="features section">
-            <div class="features__container container">
-                <h2 class="section__title">Advanced Features</h2>
-                <div class="features__grid">
-                    <div class="feature-card">
-                        <i class="ri-shield-keyhole-line feature-card__icon"></i>
-                        <h3 class="feature-card__title">Secure Generation</h3>
-                        <p class="feature-card__description">
-                            Industry-standard cryptographic algorithms for key creation
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="ri-pie-chart-line feature-card__icon"></i>
-                        <h3 class="feature-card__title">Real-time Analysis</h3>
-                        <p class="feature-card__description">
-                            Advanced analytics and visualization tools
-                        </p>
-                    </div>
-                    <div class="feature-card">
-                        <i class="ri-wallet-3-line feature-card__icon"></i>
-                        <h3 class="feature-card__title">Wallet Integration</h3>
-                        <p class="feature-card__description">
-                            Connect and manage multiple wallets seamlessly
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <section id="wallet-demo">
+            <h2>Wallet Status Visualization</h2>
+            <div id="wallet-status"></div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer__container container">
-            <div class="footer__content">
-                <div class="footer__info">
-                    <img src="assets/images/logo.svg" alt="CryptoExplorer Logo" class="footer__logo">
-                    <p class="footer__description">
-                        Advanced blockchain technology tools for the modern crypto enthusiast
-                    </p>
-                </div>
-
-                <div class="footer__links">
-                    <div class="footer__group">
-                        <h3 class="footer__title">Quick Links</h3>
-                        <ul class="footer__list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="insights.html">Insights</a></li>
-                            <li><a href="explorer.html">Explorer</a></li>
-                            <li><a href="contribute.html">Contribute</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__group">
-                        <h3 class="footer__title">Resources</h3>
-                        <ul class="footer__list">
-                            <li><a href="#" target="_blank">Documentation</a></li>
-                            <li><a href="#" target="_blank">GitHub</a></li>
-                            <li><a href="#" target="_blank">Support</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer__bottom">
-                <p class="footer__copy">
-                    © 2023 CryptoExplorer. All rights reserved
-                </p>
-                <div class="footer__social">
-                    <a href="#" target="_blank" class="footer__social-link">
-                        <i class="ri-github-fill"></i>
-                    </a>
-                    <a href="#" target="_blank" class="footer__social-link">
-                        <i class="ri-twitter-fill"></i>
-                    </a>
-                    <a href="#" target="_blank" class="footer__social-link">
-                        <i class="ri-discord-fill"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="insights.html">Insights</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2023 CryptoExplorer. All rights reserved.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/js/web3.min.js"></script>
-    <script src="assets/js/main.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
-
